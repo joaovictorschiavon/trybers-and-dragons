@@ -20,7 +20,7 @@ abstract class Archetype {
     throw new Error('Not implemented');
   }
 
-  abstract get energType():EnergyType;
+  abstract get energyType():EnergyType;
 }
 
 export default Archetype;
