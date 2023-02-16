@@ -2,7 +2,7 @@ import { EnergyType } from '../Energy';
 import Archetype from './Archetype';
 
 export default class Mage extends Archetype {
-  private energyType = 'mana' as EnergyType;
+  private _energyType = 'mana' as EnergyType;
   private static archetypeInstances = 0;
   public constructor(name: string) {
     super(name);
@@ -13,7 +13,7 @@ export default class Mage extends Archetype {
     return this.archetypeInstances;
   }
 
-  override get energType():EnergyType {
-    return this.energyType;
+  override get energyType():EnergyType {
+    return this._energyType;
   }
 }
