@@ -17,7 +17,7 @@ Para a utilização do repositório no desenvolvimento foi configurado um `Docke
 
 # code block
 Clone o repositório
-https://github.com/joaovictorschiavon/trybers-and-dragons.git
+git clone https://github.com/joaovictorschiavon/trybers-and-dragons.git
 
 Instale as dependências
 npm install
@@ -34,36 +34,36 @@ npm install
 
 ###Instanciando personagens
 Personagens do tipo `Character` por ser criados e tem os métodos de `levelUp e attack`
-# code block
+```
 const personagem = new Character('nome genérico');
 personagem.levelUp;
 personagem.attack(OtherCharacterOrMonster)
-...
+```
 
 ###Instanciando monstros
 Monstros podem ser criados, em especial há o monstro do tipo `Dragon`, ambos possuem métodos de `attack`
-# code block
+```
 const monster = new Monster();
 const dragon = new Dragon();
 monster.attack(personagem);
 dragon.attack(personagem);
-...
+```
 
 ###Batalhas de RPG
 ***
 ####___Batalha PVP (Player contra Player)___
 Com dois personagens do tipo caracter criado é possível criar uma batalha entre os dois e para saber o vencedor basta utilizar o método `fight`, se o primeiro personagem adicionado ganhar será retornado 1, se o segundo personagem ganhar será retornado -1. Obs: você pode aumentar o lvl o dos personagens antes da balalha usando o método `levelUp`:
-#code block
+```
 const batalhaPvp = new PVP(personagem1, personagem2);
 console.log(batalhaPvp.fight()); // 1 ou -1
-...
+```
 
 ####___Batalha PVE (Player contra "Environment")____
 Na batalha PVE você pode colocar um personagem para lutar com um grupo(array) de inimigos de sua escolha (outros personagens, monstros e dragões). Para descobrir o lado vitorioso basta utilizar o método `fight` na batalha, retornará 1 se o personagem ganhar e -1 se o grupo ganhar) Obs: você pode aumentar o lvl o dos personagens antes da balalha usando o método `levelUp`:
-# code block
+```
 const balatalhaPve = new PVE(personagem1, [personagem2, monster, dragon]);
 console.log(batalhaPvp.fight()); // 1 ou -1
-...
+```
 
 ***
 
